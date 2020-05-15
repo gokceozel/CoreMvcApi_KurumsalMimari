@@ -4,4 +4,13 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Concrete\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthwindKurumsalMimari.Core\NorthwindKurumsalMimari.Core.csproj" />
+    <ProjectReference Include="..\NorthwindKurumsalMimari.Entities\NorthwindKurumsalMimari.Entities.csproj" />
+  </ItemGroup>
+
 </Project>
