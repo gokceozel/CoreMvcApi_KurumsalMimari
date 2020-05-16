@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
+    <ProjectReference Include="..\NorthwindKurumsalMimari.DataAccess\NorthwindKurumsalMimari.DataAccess.csproj" />
+    <ProjectReference Include="..\NorthwindKurumsalMimari.Entities\NorthwindKurumsalMimari.Entities.csproj" />
   </ItemGroup>
 
 </Project>
