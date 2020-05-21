@@ -1,4 +1,6 @@
 ﻿using NorthwindKurumsalMimari.Business.Abstract;
+using NorthwindKurumsalMimari.Business.Constant;
+using NorthwindKurumsalMimari.Core.Utilities.Results;
 using NorthwindKurumsalMimari.DataAccess.Abstarct;
 using NorthwindKurumsalMimari.Entities.Concrete;
 using System;
@@ -16,34 +18,37 @@ namespace NorthwindKurumsalMimari.Business.Concrete
         {
             _productDal = productDal;
         }
-        public void Add(Product product)
+        public IResult Add(Product product)
         {
             _productDal.Add(product);
+          return  new SuccessDataResult<Product>(Messages.ProductAdded);
         }
 
-        public void Delete(Product product)
+        public IResult Delete(Product product)
         {
             _productDal.Delete(product);
+            return new SuccessDataResult<Product>(Messages.ProductDeleted);
         }
 
-       public Product GetById(int productId)
+       public IDataResult<Product> GetById(int productId)
         {
-            return _productDal.Get(x=>x.ProductId==productId);
+            return new SuccessDataResult<Product>(_productDal.Get(x=>x.ProductId==productId));
         }
 
-        public List<Product> GetList()
+        public IDataResult<List<Product>> GetList()
         {
-            return _productDal.GetList().ToList();
+            return  new SuccessDataResult<List<Product>>( _productDal.GetList().ToList());
         }
 
-        public List<Product> GetListByCategory(int categoryId)
+        public IDataResult<List<Product>> GetListByCategory(int categoryId)
         {
-            return _productDal.GetList(x => x.CategoryId == categoryId).ToList();
+            return new SuccessDataResult<List<Product>>(_productDal.GetList(x => x.CategoryId == categoryId).ToList());
         }
 
-        public void Update(Product product)
+        public IResult Update(Product product)
         {
             _productDal.Update(product);
+            return new SuccessDataResult<Product>( Messages.ProductUpdated);
         }
     }
 }
