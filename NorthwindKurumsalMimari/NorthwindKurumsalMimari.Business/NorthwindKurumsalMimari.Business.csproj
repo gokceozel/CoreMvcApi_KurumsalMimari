@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\NorthwindKurumsalMimari.DataAccess\NorthwindKurumsalMimari.DataAccess.csproj" />
     <ProjectReference Include="..\NorthwindKurumsalMimari.Entities\NorthwindKurumsalMimari.Entities.csproj" />
   </ItemGroup>

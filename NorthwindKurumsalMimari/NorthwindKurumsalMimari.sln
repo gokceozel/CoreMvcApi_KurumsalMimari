@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindKurumsalMimari.Entities", "NorthwindKurumsalMimari.Entities\NorthwindKurumsalMimari.Entities.csproj", "{B6E2AE4A-DC01-4678-B91A-175463005EAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindKurumsalMimari.Entities", "NorthwindKurumsalMimari.Entities\NorthwindKurumsalMimari.Entities.csproj", "{B6E2AE4A-DC01-4678-B91A-175463005EAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindKurumsalMimari.DataAccess", "NorthwindKurumsalMimari.DataAccess\NorthwindKurumsalMimari.DataAccess.csproj", "{2DDF9670-3DC3-42B1-8C75-E98B9D181A00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindKurumsalMimari.DataAccess", "NorthwindKurumsalMimari.DataAccess\NorthwindKurumsalMimari.DataAccess.csproj", "{2DDF9670-3DC3-42B1-8C75-E98B9D181A00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindKurumsalMimari.Business", "NorthwindKurumsalMimari.Business\NorthwindKurumsalMimari.Business.csproj", "{D5C74F47-4077-4B1C-A223-AEFCA32B4998}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindKurumsalMimari.Business", "NorthwindKurumsalMimari.Business\NorthwindKurumsalMimari.Business.csproj", "{D5C74F47-4077-4B1C-A223-AEFCA32B4998}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindKurumsalMimari.Core", "NorthwindKurumsalMimari.Core\NorthwindKurumsalMimari.Core.csproj", "{65E42AB5-623B-464E-A3DE-8FC44B3733C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindKurumsalMimari.Core", "NorthwindKurumsalMimari.Core\NorthwindKurumsalMimari.Core.csproj", "{65E42AB5-623B-464E-A3DE-8FC44B3733C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindKurumsalMimari.WebAPI", "NorthwindKurumsalMimari.WebAPI\NorthwindKurumsalMimari.WebAPI.csproj", "{ADBAD666-8811-4235-9C7A-9EB6750D0E5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindKurumsalMimari.WebAPI", "NorthwindKurumsalMimari.WebAPI\NorthwindKurumsalMimari.WebAPI.csproj", "{ADBAD666-8811-4235-9C7A-9EB6750D0E5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
