@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace NorthwindKurumsalMimari.Entities.Concrete
+namespace NorthwindKurumsalMimari.Core.Entities.Concrete
 {
    public class User :IEntity
     {

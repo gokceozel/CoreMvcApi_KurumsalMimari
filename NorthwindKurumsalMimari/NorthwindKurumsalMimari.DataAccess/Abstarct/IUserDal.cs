@@ -1,4 +1,5 @@
 ﻿using NorthwindKurumsalMimari.Core.DataAccess;
+using NorthwindKurumsalMimari.Core.Entities.Concrete;
 using NorthwindKurumsalMimari.Entities.Concrete;
 using System;
 using System.Collections.Generic;

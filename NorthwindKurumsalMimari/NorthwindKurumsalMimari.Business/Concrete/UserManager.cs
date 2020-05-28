@@ -1,4 +1,5 @@
 ﻿using NorthwindKurumsalMimari.Business.Abstract;
+using NorthwindKurumsalMimari.Core.Entities.Concrete;
 using NorthwindKurumsalMimari.DataAccess.Abstarct;
 using NorthwindKurumsalMimari.Entities.Concrete;
 using System;
