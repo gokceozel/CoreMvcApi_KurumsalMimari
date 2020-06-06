@@ -70,8 +70,9 @@ namespace NorthwindKurumsalMimari.WebAPI
 
             app.UseRouting();
 
-            app.UseAuthorization();  //anahtar
             app.UseAuthentication(); //ne yapýlabilir
+            app.UseAuthorization();  //anahtar
+           
 
             app.UseEndpoints(endpoints =>
             {
