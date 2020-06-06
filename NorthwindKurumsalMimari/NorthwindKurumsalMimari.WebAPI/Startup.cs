@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
+using NorthwindKurumsalMimari.Core.Utilities.Security.Encyption;
+using NorthwindKurumsalMimari.Core.Utilities.Security.Jwt;
 
 namespace NorthwindKurumsalMimari.WebAPI
 {
@@ -31,7 +35,23 @@ namespace NorthwindKurumsalMimari.WebAPI
                 options.AddPolicy("AllowOrigin",
                 builder => builder.WithOrigins("http://localhost:4200"));
             });
-            services.AddAuthentication();
+            var tokenOptions = Configuration.GetSection(key: "TokenOptions").Get<TokenOptions>();
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(
+                options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer=true,
+                        ValidateAudience=true,
+                        ValidateLifetime=true,
+                        ValidIssuer=tokenOptions.Issuer,
+                        ValidAudience=tokenOptions.Audience,
+                        ValidateIssuerSigningKey=true,
+                        IssuerSigningKey= SecurityKeyHelper.SecurityKey(tokenOptions.SecurityKey)
+                    };
+                }
+                );
 
          }
 
