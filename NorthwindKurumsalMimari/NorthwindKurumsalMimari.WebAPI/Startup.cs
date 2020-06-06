@@ -31,7 +31,7 @@ namespace NorthwindKurumsalMimari.WebAPI
                 options.AddPolicy("AllowOrigin",
                 builder => builder.WithOrigins("http://localhost:4200"));
             });
-
+            services.AddAuthentication();
 
          }
 
